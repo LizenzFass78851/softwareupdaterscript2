@@ -1,4 +1,4 @@
-# softwareupdaterscript2
+# Software Updater Script 2
 Is a script that the supported software can be updated via the task planning of windows
 
 - to use the script, simply put the script in any folder.
