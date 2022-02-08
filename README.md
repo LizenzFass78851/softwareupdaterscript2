@@ -8,6 +8,6 @@ Is a script that the supported software can be updated via the task planning of 
 - The script also allows possibilities if you want to update more than just firefox and the adobe reader dc. (you have to write the parameters yourself if you want)
 
 # Out NOW - The XL variant 
-- there is now the optional additional script softwareupdaterXL.bat.
+There is now the optional additional script softwareupdaterXL.bat.
 - The difference is that the XL variant now installs more software than just firefox or the reader dc silent.
 - The silent install is supported according to the same principle as explained above: Firefox, Thunderbird, Adobe Reader DC also in the exe variant, Libreoffice, vlc, xmedia recode, furmark, ccleaner, virtualdj, Macrium Reflect, dumo, sumo
