@@ -53,8 +53,9 @@ ECHO Virtualdj
 (for %%a IN (install_virtualdj*.msi) DO msiexec.exe /i %%a /q /norestart && del %%a )
 
 :install-reflect
-ECHO Macrium Reflect
-(for %%a IN (reflect_setup*.exe) DO %%a /q /norestart && del %%a )
+REM This method introduces a bug in Macrium Reflect which breaks the creation of shadow copies
+REM ECHO Macrium Reflect
+REM (for %%a IN (reflect_setup*.exe) DO %%a /q /norestart && del %%a )
 
 :install-dumo
 ECHO DUMO
