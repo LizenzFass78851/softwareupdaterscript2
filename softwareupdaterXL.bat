@@ -57,6 +57,10 @@ REM This method introduces a bug in Macrium Reflect which breaks the creation of
 REM ECHO Macrium Reflect
 REM (for %%a IN (reflect_setup*.exe) DO %%a /q /norestart && del %%a )
 
+:install-msedge-new
+ECHO Microsoft Edge
+(for %%a IN (MicrosoftEdgeEnterprise*.msi) DO msiexec.exe /i %%a /q /norestart && del %%a )
+
 :install-dumo
 ECHO DUMO
 (for %%a IN (dumo*.exe) DO %%a /VERYSILENT /NORESTART && del %%a )
