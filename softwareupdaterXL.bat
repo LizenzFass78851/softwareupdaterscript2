@@ -49,6 +49,9 @@ REM This method introduces a bug in Macrium Reflect which breaks the creation of
 REM ECHO Macrium Reflect
 REM (for %%a IN (reflect_setup*.exe) DO echo %%a && %%a /q /norestart && del %%a )
 
+:install-chrome
+(for %%a IN (Chrome*Setup*.exe) DO echo %%a && %%a /silent /install && del %%a )
+
 :install-msedge-new
 (for %%a IN (MicrosoftEdgeEnterprise*.msi) DO echo %%a && msiexec.exe /i %%a /q /norestart && del %%a )
 
