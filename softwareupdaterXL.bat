@@ -10,6 +10,9 @@ TITLE SW-Updater-Script
 (for %%a IN (jre-8u*-windows-i586.exe) DO echo %%a && wmic product where "name like 'Java 8%%'" call uninstall && %%a /s && del %%a )
 (for %%a IN (jre-8u*-windows-x64.exe) DO echo %%a && %%a /s && del %%a )
 
+:install-7zip
+(for %%a IN (7z*.exe) DO echo %%a && %%a /S && del %%a )
+
 :install-firefox
 (for %%a IN ("firefox*.exe") DO echo %%a && "%%a" /s && del "%%a" )
 
