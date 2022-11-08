@@ -34,6 +34,9 @@ TITLE SW-Updater-Script
 :install-faststone-image-viewer
 (for %%a IN (FSViewerSetup*.exe) DO echo %%a && %%a /S && del %%a )
 
+:install-teamviewer
+(for %%a IN (TeamViewer_Setup*.exe) DO echo %%a && %%a /S && del %%a )
+
 :install-virtualbox
 (for %%a IN (VirtualBox*.exe) DO echo %%a && %%a --silent && del %%a )
 REM not silent step and file after not deleted
