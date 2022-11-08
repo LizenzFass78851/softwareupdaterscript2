@@ -13,6 +13,12 @@ TITLE SW-Updater-Script
 :install-7zip
 (for %%a IN (7z*.exe) DO echo %%a && %%a /S && del %%a )
 
+:install-anydesk
+REM ###not possible because anydesk is not made for this kind of silent install
+REM set ANYDESKPROG=C:\Program Files
+REM if %PROCESSOR_ARCHITECTURE%==AMD64 set ANYDESKPROG=C:\Program Files (x86)
+REM (for %%a IN (AnyDesk.exe) DO echo %%a && %%a --install "%ANYDESKPROG%\AnyDesk" --start-with-win --create-shortcuts --create-desktop-icon --silent && timeout 2 && del %%a )
+
 :install-firefox
 (for %%a IN ("firefox*.exe") DO echo %%a && "%%a" /s && del "%%a" )
 
@@ -64,8 +70,7 @@ REM not silent step and file after not deleted
 (for %%a IN (install_virtualdj*.msi) DO echo %%a && msiexec.exe /i %%a /q /norestart && del %%a )
 
 :install-reflect
-REM This method introduces a bug in Macrium Reflect which breaks the creation of shadow copies
-REM ECHO Macrium Reflect
+REM ###This method introduces a bug in Macrium Reflect which breaks the creation of shadow copies
 REM (for %%a IN (reflect_setup*.exe) DO echo %%a && %%a /q /norestart && del %%a )
 
 :install-free-download-manager
