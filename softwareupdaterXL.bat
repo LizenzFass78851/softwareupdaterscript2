@@ -31,6 +31,9 @@ TITLE SW-Updater-Script
 :install-vlc
 (for %%a IN (vlc*.exe) DO echo %%a && %%a /S && del %%a )
 
+:install-musicbrainz-picard
+(for %%a IN (picard-setup*.exe) DO echo %%a && %%a /S && del %%a )
+
 :install-faststone-image-viewer
 (for %%a IN (FSViewerSetup*.exe) DO echo %%a && %%a /S && del %%a )
 
