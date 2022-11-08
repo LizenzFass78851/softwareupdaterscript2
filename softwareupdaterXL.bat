@@ -28,6 +28,9 @@ TITLE SW-Updater-Script
 :install-vlc
 (for %%a IN (vlc*.exe) DO echo %%a && %%a /S && del %%a )
 
+:install-faststone-image-viewer
+(for %%a IN (FSViewerSetup*.exe) DO echo %%a && %%a /S && del %%a )
+
 :install-virtualbox
 (for %%a IN (VirtualBox*.exe) DO echo %%a && %%a --silent && del %%a )
 REM not silent step and file after not deleted
