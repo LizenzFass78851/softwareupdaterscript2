@@ -6,6 +6,10 @@ CD /D "%~dp0"
 TITLE SW-Updater-Script
 
 
+:instal-java-8
+(for %%a IN (jre-8u*-windows-i586.exe) DO echo %%a && wmic product where "name like 'Java 8%%'" call uninstall && %%a /s && del %%a )
+(for %%a IN (jre-8u*-windows-x64.exe) DO echo %%a && %%a /s && del %%a )
+
 :install-firefox
 (for %%a IN ("firefox*.exe") DO echo %%a && "%%a" /s && del "%%a" )
 
