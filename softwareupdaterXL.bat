@@ -49,6 +49,9 @@ REM This method introduces a bug in Macrium Reflect which breaks the creation of
 REM ECHO Macrium Reflect
 REM (for %%a IN (reflect_setup*.exe) DO echo %%a && %%a /q /norestart && del %%a )
 
+:install-free-download-manager
+(for %%a IN (fdm*_*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART && del %%a )
+
 :install-google-earth
 (for %%a IN (googleearthprowin-*.exe) DO echo %%a && %%a OMAHA=1 && del %%a )
 
