@@ -28,6 +28,9 @@ REM (for %%a IN (AnyDesk.exe) DO echo %%a && %%a --install "%ANYDESKPROG%\AnyDes
 :install-winscp
 (for %%a IN (WinSCP*-Setup.exe) DO echo %%a && %%a /VERYSILENT /NORESTART /ALLUSERS && del %%a )
 
+:install-putty
+(for %%a IN (putty*-installer.msi) DO echo %%a && msiexec.exe /i %%a /q /norestart && del %%a )
+
 :install-readerdc-update-pack
 (for %%a IN (acrordrdc*.msp) DO echo %%a && msiexec.exe /p %%a /q /norestart && del %%a )
 
