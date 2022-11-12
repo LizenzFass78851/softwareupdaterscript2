@@ -25,6 +25,9 @@ REM (for %%a IN (AnyDesk.exe) DO echo %%a && %%a --install "%ANYDESKPROG%\AnyDes
 :install-thunderbird
 (for %%a IN ("thunderbird*.exe") DO echo %%a && "%%a" /s && del "%%a" )
 
+:install-winscp
+(for %%a IN (WinSCP*-Setup.exe) DO echo %%a && %%a /VERYSILENT /NORESTART /ALLUSERS && del %%a )
+
 :install-readerdc-update-pack
 (for %%a IN (acrordrdc*.msp) DO echo %%a && msiexec.exe /p %%a /q /norestart && del %%a )
 
