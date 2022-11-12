@@ -28,6 +28,7 @@ The silent install is supported according to the same principle as explained abo
 - msedge-new
 - musicbrainz-picard
 - pdf24-creator
+- putty
 - readerdc-exe-setup
 - readerdc-update-pack
 - recuva
