@@ -7,7 +7,35 @@ Is a script that the supported software can be updated via the task planning of 
 - In this case the script installs an update of firefox and adobe reader dc and then deletes the setups used for this.
 - The script also allows possibilities if you want to update more than just firefox and the adobe reader dc. (you have to write the parameters yourself if you want)
 
-### Out NOW - The XL variant 
+## Out NOW - The XL variant 
 There is now the optional additional script softwareupdaterXL.bat.
 - The difference is that the XL variant now installs more software than just firefox or the reader dc silent.
-- The silent install is supported according to the same principle as explained above: Firefox, Thunderbird, Adobe Reader DC also in the exe variant, Libreoffice, vlc, xmedia recode, furmark, ccleaner, virtualdj, Macrium Reflect, Microsoft Edge, dumo, sumo
+
+The silent install is supported according to the same principle as explained above:
+- 7zip
+- anydesk
+- ccleaner
+- chrome
+- dumo
+- faststone-image-viewer
+- firefox
+- free-download-manager
+- furmark
+- google-earth
+- hwinfo
+- java 8
+- libreoffice
+- msedge-new
+- musicbrainz-picard
+- pdf24-creator
+- readerdc-exe-setup
+- readerdc-update-pack
+- recuva
+- reflect
+- sumo
+- teamviewer
+- thunderbird
+- virtualbox
+- virtualdj
+- vlc
+- xmediarecode
