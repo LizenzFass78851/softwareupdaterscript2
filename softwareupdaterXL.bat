@@ -94,6 +94,9 @@ REM (for %%a IN (reflect_setup*.exe) DO echo %%a && %%a /q /norestart && del %%a
 :install-msedge-new
 (for %%a IN (MicrosoftEdgeEnterprise*.msi) DO echo %%a && msiexec.exe /i %%a /q /norestart && del %%a )
 
+:install-ashampoo-burning-studio
+(for %%a IN (ashampoo_burning_studio_*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART && del %%a )
+
 :install-dumo
 (for %%a IN (dumo*.exe) DO echo %%a && %%a /VERYSILENT /NORESTART && del %%a )
 IF EXIST "%USERPROFILE%\Desktop\SUMo Home Page.URL" del "%USERPROFILE%\Desktop\SUMo Home Page.URL"
