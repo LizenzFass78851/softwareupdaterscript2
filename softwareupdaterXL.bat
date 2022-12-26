@@ -96,6 +96,7 @@ REM (for %%a IN (reflect_setup*.exe) DO echo %%a && %%a /q /norestart && del %%a
 
 :install-ashampoo-burning-studio
 (for %%a IN (ashampoo_burning_studio_*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART && del %%a )
+IF EXIST "%PUBLIC%\Desktop\Ashampoo Deals.url" del "%PUBLIC%\Desktop\Ashampoo Deals.url"
 
 :install-dumo
 (for %%a IN (dumo*.exe) DO echo %%a && %%a /VERYSILENT /NORESTART && del %%a )
