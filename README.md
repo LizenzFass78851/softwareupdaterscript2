@@ -14,6 +14,7 @@ There is now the optional additional script softwareupdaterXL.bat.
 The silent install is supported according to the same principle as explained above:
 - 7zip
 - anydesk
+- ashampoo burning studio
 - ccleaner
 - chrome
 - dumo
