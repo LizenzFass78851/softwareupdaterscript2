@@ -28,6 +28,7 @@ The silent install is supported according to the same principle as explained abo
 - libreoffice
 - msedge-new
 - musicbrainz-picard
+- notepad++
 - pdf24-creator
 - putty
 - readerdc-exe-setup
