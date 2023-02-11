@@ -72,6 +72,9 @@ REM not silent step and file after not deleted
 :install-recuva
 (for %%a IN ("rcsetup*.exe") DO echo %%a && "%%a" /S && del "%%a" )
 
+:install-notepadpp
+(for %%a IN ("npp.*.Installer*.exe") DO echo %%a && "%%a" /S && del "%%a" )
+
 :install-virtualdj
 (for %%a IN (install_virtualdj*.msi) DO echo %%a && msiexec.exe /i %%a /q /norestart && del %%a )
 
