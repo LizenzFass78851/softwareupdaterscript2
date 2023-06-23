@@ -7,10 +7,10 @@ TITLE SW-Updater-Script
 
 
 :install-firefox
-(for %%a IN ("firefox*.exe") DO "%%a" /s && del "%%a" )
+(for %%a IN ("firefox*.exe") DO echo %%a && "%%a" /s && del "%%a" )
 
-:install-readerdc
-(for %%a IN (acrordrdc*.msp) DO msiexec.exe /p %%a /q /norestart && del %%a )
+:install-readerdc-update-pack
+(for %%a IN (acrordrdc*.msp) DO echo %%a && msiexec.exe /p %%a /q /norestart && del %%a )
 
 
 :exits
