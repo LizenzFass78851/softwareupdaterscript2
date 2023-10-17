@@ -41,5 +41,6 @@ The silent install is supported according to the same principle as explained abo
 - virtualbox
 - virtualdj
 - vlc
+- wingetui
 - winscp
 - xmediarecode
