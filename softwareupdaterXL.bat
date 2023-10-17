@@ -108,6 +108,9 @@ IF EXIST "%USERPROFILE%\Desktop\SUMo Home Page.URL" del "%USERPROFILE%\Desktop\S
 :install-sumo
 (for %%a IN (sumo*.exe) DO echo %%a && %%a /VERYSILENT /NORESTART && del %%a )
 
+:install-wingetui
+(for %%a IN (WingetUI.Installer.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /ALLUSERS && del %%a )
+
 :install-office-msi-updates
 (for %%a IN (*x-none.msp) DO echo %%a && msiexec.exe /p %%a /q /norestart && del %%a )
 
