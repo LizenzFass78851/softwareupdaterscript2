@@ -38,6 +38,7 @@ The silent install is supported according to the same principle as explained abo
 - sumo
 - teamviewer
 - thunderbird
+- ucheck
 - virtualbox
 - virtualdj
 - vlc
