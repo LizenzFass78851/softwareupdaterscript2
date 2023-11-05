@@ -12,6 +12,9 @@ TITLE SW-Updater-Script
 :install-readerdc-update-pack
 (for %%a IN (acrordrdc*.msp) DO echo %%a && msiexec.exe /p %%a /q /norestart && del %%a )
 
+:install-office-msi-updates
+(for %%a IN (*x-none.msp) DO echo %%a && msiexec.exe /p %%a /q /norestart && del %%a )
+
 
 :exits
 exit
