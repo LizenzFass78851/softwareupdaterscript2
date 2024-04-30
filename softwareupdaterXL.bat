@@ -100,6 +100,9 @@ REM (for %%a IN (reflect_setup*.exe) DO echo %%a && %%a /q /norestart && del %%a
 (for %%a IN (ashampoo_burning_studio_*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART && del %%a )
 IF EXIST "%PUBLIC%\Desktop\Ashampoo Deals.url" del "%PUBLIC%\Desktop\Ashampoo Deals.url"
 
+:install-cdburnerxp
+(for %%a IN (cdbxp_setup*.exe) DO echo %%a && %%a /VERYSILENT /NORESTART && del %%a )
+
 :install-dumo
 (for %%a IN (dumo*.exe) DO echo %%a && %%a /VERYSILENT /NORESTART && del %%a )
 IF EXIST "%USERPROFILE%\Desktop\SUMo Home Page.URL" del "%USERPROFILE%\Desktop\SUMo Home Page.URL"

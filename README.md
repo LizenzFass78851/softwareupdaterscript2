@@ -16,6 +16,7 @@ The silent install is supported according to the same principle as explained abo
 - anydesk
 - ashampoo burning studio
 - ccleaner
+- cdburner xp
 - chrome
 - dumo
 - faststone-image-viewer
