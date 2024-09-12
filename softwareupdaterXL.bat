@@ -54,7 +54,7 @@ REM (for %%a IN (AnyDesk.exe) DO echo %%a && %%a --install "%ANYDESKPROG%\AnyDes
 :install-virtualbox
 (for %%a IN (VirtualBox*.exe) DO echo %%a && %%a --silent && del %%a )
 REM not silent step and file after not deleted
-(for %%a IN (Oracle_VM_VirtualBox_Extension_Pack*.vbox-extpack) DO echo %%a && explorer %%a )
+(for %%a IN (Oracle*_VirtualBox_Extension_Pack*.vbox-extpack) DO echo %%a && explorer %%a )
 
 :install-pdf24-creator
 (for %%a IN (pdf24-creator*.exe) DO echo %%a && %%a /VERYSILENT /NORESTART && del %%a )
