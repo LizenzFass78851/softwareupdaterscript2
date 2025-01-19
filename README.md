@@ -11,6 +11,9 @@ Is a script that the supported software can be updated via the task planning of 
 There is now the optional additional script softwareupdaterXL.bat.
 - The difference is that the XL variant now installs more software than just firefox or the reader dc silent.
 
+> [!IMPORTANT]
+> It is not guaranteed that the script will continue to work for the software you want to install because there is a possibility that the manufacturer of the software listed below could change their installer, which means that the commands stored in the script for the silent installation of the desired software will not more work without an adjustment in the script.
+
 | Supported Silent Install of Software |
 | :---------- |
 | 7zip |
