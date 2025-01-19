@@ -11,38 +11,39 @@ Is a script that the supported software can be updated via the task planning of 
 There is now the optional additional script softwareupdaterXL.bat.
 - The difference is that the XL variant now installs more software than just firefox or the reader dc silent.
 
-The silent install is supported according to the same principle as explained above:
-- 7zip
-- anydesk
-- ashampoo burning studio
-- ccleaner
-- cdburner xp
-- chrome
-- dumo
-- faststone-image-viewer
-- firefox
-- free-download-manager
-- furmark
-- google-earth
-- hwinfo
-- java 8
-- libreoffice
-- msedge-new
-- musicbrainz-picard
-- notepad++
-- pdf24-creator
-- putty
-- readerdc-exe-setup
-- readerdc-update-pack
-- recuva
-- reflect
-- sumo
-- teamviewer
-- thunderbird
-- ucheck
-- virtualbox
-- virtualdj
-- vlc
-- wingetui
-- winscp
-- xmediarecode
+| Supported Silent Install of Software |
+| :---------- |
+| 7zip |
+| anydesk |
+| ashampoo burning studio |
+| ccleaner |
+| cdburner xp |
+| chrome |
+| dumo |
+| faststone-image-viewer |
+| firefox |
+| free-download-manager |
+| furmark |
+| google-earth |
+| hwinfo |
+| java 8 |
+| libreoffice |
+| msedge-new |
+| musicbrainz-picard |
+| notepad++ |
+| PDF24-creator |
+| putty |
+| readerdc-exe-setup |
+| readerdc-update-pack |
+| recuva |
+| reflect |
+| sumo |
+| teamviewer |
+| thunderbird |
+| ucheck |
+| virtualbox |
+| virtualdj |
+| vlc |
+| wingetui |
+| winscp |
+| xmediarecode |
