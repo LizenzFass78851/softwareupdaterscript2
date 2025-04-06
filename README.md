@@ -34,6 +34,7 @@ There is now the optional additional script softwareupdaterXL.bat.
 | msedge-new |
 | musicbrainz-picard |
 | notepad++ |
+| Onlyoffice |
 | PDF24-creator |
 | putty |
 | readerdc-exe-setup |

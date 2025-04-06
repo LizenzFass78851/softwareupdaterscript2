@@ -39,6 +39,9 @@ REM (for %%a IN (AnyDesk.exe) DO echo %%a && %%a --install "%ANYDESKPROG%\AnyDes
 :install-libreoffice
 (for %%a IN (LibreOffice*.msi) DO echo %%a && msiexec.exe /i %%a /q /norestart && del %%a )
 
+:install-onlyoffice
+(for %%a IN (DesktopEditors_x*.exe) DO echo %%a && %%a /VERYSILENT /NORESTART && del %%a )
+
 :install-vlc
 (for %%a IN (vlc*.exe) DO echo %%a && %%a /S && del %%a )
 
