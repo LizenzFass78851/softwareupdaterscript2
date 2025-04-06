@@ -14,40 +14,40 @@ Is a script that the supported software can be updated via the task planning of 
 There is now the optional additional script softwareupdaterXL.bat.
 - The difference is that the XL variant now installs more software than just firefox or the reader dc silent.
 
-| Supported Silent Install of Software |
-| :---------- |
-| 7zip |
-| anydesk |
-| ashampoo burning studio |
-| ccleaner |
-| cdburner xp |
-| chrome |
-| dumo |
-| faststone-image-viewer |
-| firefox |
-| free-download-manager |
-| furmark |
-| google-earth |
-| hwinfo |
-| java 8 |
-| libreoffice |
-| msedge-new |
-| musicbrainz-picard |
-| notepad++ |
-| Onlyoffice |
-| PDF24-creator |
-| putty |
-| readerdc-exe-setup |
-| readerdc-update-pack |
-| recuva |
-| reflect |
-| sumo |
-| teamviewer |
-| thunderbird |
-| ucheck |
-| virtualbox |
-| virtualdj |
-| vlc |
-| wingetui |
-| winscp |
-| xmediarecode |
+### Supported Silent Install of Software
+- 7zip
+- Anydesk
+- Ashampoo Burning Studio
+- Ccleaner
+- Cdburnerxp
+- Chrome
+- Dumo
+- Faststone Image Viewer
+- Firefox
+- Free Download Manager
+- Furmark
+- Google Earth
+- Hwinfo
+- Java 8
+- Libreoffice
+- Msedge New
+- Musicbrainz Picard
+- Notepadpp
+- Office Msi Updates
+- Onlyoffice
+- Pdf24 Creator
+- Putty
+- Readerdc Exe Setup
+- Readerdc Update Pack
+- Recuva
+- Reflect
+- Sumo
+- Teamviewer
+- Thunderbird
+- Ucheck
+- Virtualbox
+- Virtualdj
+- Vlc
+- Wingetui
+- Winscp
+- Xmediarecode
