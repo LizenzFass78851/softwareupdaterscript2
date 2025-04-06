@@ -6,7 +6,12 @@ TITLE SW-Updater-Script
 
 
 :install-java-8
-(for %%a IN (jre-8u*-windows-i586.exe) DO echo %%a && wmic product where "name like 'Java 8%%'" call uninstall && %%a /s && del %%a )
+if exist "%SYSTEMROOT%\System32\wbem\WMIC.exe" (
+    set JAVA_UNINSTALL_COMMAND=wmic product where "name like 'Java 8%%'" call uninstall
+) else (
+    set JAVA_UNINSTALL_COMMAND=powershell -Command "Get-CimInstance -ClassName Win32_Product -Filter \"Name LIKE 'Java 8%'\" | ForEach-Object { $_.Uninstall() }"
+)
+(for %%a IN (jre-8u*-windows-i586.exe) DO echo %%a && %JAVA_UNINSTALL_COMMAND% && %%a /s && del %%a )
 (for %%a IN (jre-8u*-windows-x64.exe) DO echo %%a && %%a /s && del %%a )
 
 :install-7zip
