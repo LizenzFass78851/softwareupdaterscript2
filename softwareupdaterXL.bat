@@ -4,13 +4,17 @@ pushd "%CD%" && CD /D "%~dp0"
 
 TITLE SW-Updater-Script
 
+SET X86-UNINSTALL-REG="HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall"
+SET X64-UNINSTALL-REG="HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"
 
 :install-java-8
 for %%a IN (jre-8u*-windows-i586.exe) DO (
     echo %%a
 
-    for /f "tokens=8* delims=^\" %%i in ('reg query "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall" /s /f "Java 8" ^| findstr "HKEY"') do (
-        echo Uninstall: %%i
+    for /f "tokens=8* delims=^\" %%i in ('reg query "%X86-UNINSTALL-REG%" /s /f "Java 8" ^| findstr "HKEY"') do (
+        for /f "tokens=2* delims= " %%d in ('reg query "%X86-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
+            echo Uninstall: %%e
+        )
         msiexec.exe /x%%i /q /norestart
     )
 
@@ -19,8 +23,10 @@ for %%a IN (jre-8u*-windows-i586.exe) DO (
 for %%a IN (jre-8u*-windows-x64.exe) DO (
     echo %%a
 
-    for /f "tokens=7* delims=^\" %%i in ('reg query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" /s /f "Java 8" ^| findstr "HKEY"') do (
-        echo Uninstall: %%i
+    for /f "tokens=7* delims=^\" %%i in ('reg query "%X64-UNINSTALL-REG%" /s /f "Java 8" ^| findstr "HKEY"') do (
+        for /f "tokens=2* delims= " %%d in ('reg query "%X64-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
+            echo Uninstall: %%e
+        )
         msiexec.exe /x%%i /q /norestart
     )
 
@@ -76,12 +82,16 @@ REM (for %%a IN (AnyDesk.exe) DO echo %%a && %%a --install "%ANYDESKPROG%\AnyDes
 for %%a IN (VirtualBox*.exe) DO (
     echo %%a
 
-    for /f "tokens=8* delims=^\" %%i in ('reg query "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall" /s /f "Oracle VirtualBox" ^| findstr "HKEY"') do (
-        echo Uninstall: %%i
+    for /f "tokens=8* delims=^\" %%i in ('reg query "%X86-UNINSTALL-REG%" /s /f "Oracle VirtualBox" ^| findstr "HKEY"') do (
+        for /f "tokens=2* delims= " %%d in ('reg query "%X86-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
+            echo Uninstall: %%e
+        )
         msiexec.exe /x%%i /q /norestart
     )
-    for /f "tokens=7* delims=^\" %%i in ('reg query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" /s /f "Oracle VirtualBox" ^| findstr "HKEY"') do (
-        echo Uninstall: %%i
+    for /f "tokens=7* delims=^\" %%i in ('reg query "%X64-UNINSTALL-REG%" /s /f "Oracle VirtualBox" ^| findstr "HKEY"') do (
+        for /f "tokens=2* delims= " %%d in ('reg query "%X64-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
+            echo Uninstall: %%e
+        )
         msiexec.exe /x%%i /q /norestart
     )
 
