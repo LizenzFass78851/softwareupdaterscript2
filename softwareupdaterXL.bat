@@ -73,7 +73,20 @@ REM (for %%a IN (AnyDesk.exe) DO echo %%a && %%a --install "%ANYDESKPROG%\AnyDes
 (for %%a IN (TeamViewer_Setup*.exe) DO echo %%a && %%a /S && del %%a )
 
 :install-virtualbox
-(for %%a IN (VirtualBox*.exe) DO echo %%a && %%a --silent && del %%a )
+for %%a IN (VirtualBox*.exe) DO (
+    echo %%a
+
+    for /f "tokens=8* delims=^\" %%i in ('reg query "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall" /s /f "Oracle VirtualBox" ^| findstr "HKEY"') do (
+        echo Uninstall: %%i
+        msiexec.exe /x%%i /q /norestart
+    )
+    for /f "tokens=7* delims=^\" %%i in ('reg query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" /s /f "Oracle VirtualBox" ^| findstr "HKEY"') do (
+        echo Uninstall: %%i
+        msiexec.exe /x%%i /q /norestart
+    )
+
+    %%a --silent && del %%a
+)
 REM not silent step and file after not deleted
 (for %%a IN (Oracle*_VirtualBox_Extension_Pack*.vbox-extpack) DO echo %%a && explorer %%a )
 
