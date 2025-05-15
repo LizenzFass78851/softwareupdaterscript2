@@ -29,6 +29,7 @@ There is now the optional additional script softwareupdaterXL.bat.
 - Google Earth
 - Hwinfo
 - Java 8
+- Keepass
 - Libreoffice
 - Msedge New
 - Musicbrainz Picard
