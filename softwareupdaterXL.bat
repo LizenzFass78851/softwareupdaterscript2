@@ -78,6 +78,20 @@ REM (for %%a IN (AnyDesk.exe) DO echo %%a && %%a --install "%ANYDESKPROG%\AnyDes
 :install-faststone-image-viewer
 (for %%a IN (FSViewerSetup*.exe) DO echo %%a && %%a /S && del %%a )
 
+:install-blender
+for %%a IN (blender*-windows-x64.msi) DO (
+    echo %%a
+
+    for /f "tokens=7* delims=^\" %%i in ('reg query "%X64-UNINSTALL-REG%" /s /f "Blender" ^| findstr "HKEY"') do (
+        for /f "tokens=2* delims= " %%d in ('reg query "%X64-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
+            echo Uninstall: %%e
+        )
+        msiexec.exe /x%%i /q /norestart
+    )
+
+    msiexec.exe /i %%a /q /norestart && del %%a
+)
+
 :install-teamviewer
 (for %%a IN (TeamViewer_Setup*.exe) DO echo %%a && %%a /S && del %%a )
 
