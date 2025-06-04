@@ -99,6 +99,9 @@ for %%a IN (blender*-windows-x64.msi) DO (
 for %%a IN (VirtualBox*.exe) DO (
     echo %%a
 
+    REM to prevent the reboot required by the uninstallation
+    %%a --silent
+    
     for /f "tokens=8* delims=^\" %%i in ('reg query "%X86-UNINSTALL-REG%" /s /f "Oracle VirtualBox" ^| findstr "HKEY"') do (
         for /f "tokens=2* delims= " %%d in ('reg query "%X86-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
             echo Uninstall: %%e
