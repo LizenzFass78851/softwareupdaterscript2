@@ -135,6 +135,9 @@ REM not silent step and file after not deleted
 :install-recuva
 (for %%a IN ("rcsetup*.exe") DO echo %%a && "%%a" /S && del "%%a" )
 
+:install-bleachbit
+(for %%a IN ("BleachBit-*setup.exe") DO echo %%a && "%%a" /allusers /S && del "%%a" )
+
 :install-notepadpp
 (for %%a IN ("npp.*.Installer*.exe") DO echo %%a && "%%a" /S && del "%%a" )
 
