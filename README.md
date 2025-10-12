@@ -18,6 +18,7 @@ There is now the optional additional script softwareupdaterXL.bat.
 - 7zip
 - Anydesk
 - Ashampoo Burning Studio
+- Bleachbit
 - Blender
 - Ccleaner
 - Cdburnerxp
