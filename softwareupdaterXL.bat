@@ -148,6 +148,9 @@ REM not silent step and file after not deleted
 REM ###This method introduces a bug in Macrium Reflect which breaks the creation of shadow copies
 REM (for %%a IN (reflect_setup*.exe) DO echo %%a && %%a /q /norestart && del %%a )
 
+:install-hasleo-backup-suite
+(for %%a IN (Hasleo_Backup_Suite*_*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART && del %%a )
+
 :install-free-download-manager
 (for %%a IN (fdm*_*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART && del %%a )
 
