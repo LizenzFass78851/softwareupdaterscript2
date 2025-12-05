@@ -29,6 +29,7 @@ There is now the optional additional script softwareupdaterXL.bat.
 - Free Download Manager
 - Furmark
 - Google Earth
+- Hasleo Backup Suite
 - Hwinfo
 - Java 8
 - Keepass
