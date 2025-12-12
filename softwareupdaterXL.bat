@@ -167,8 +167,29 @@ REM (for %%a IN (reflect_setup*.exe) DO echo %%a && %%a /q /norestart && del %%a
 (for %%a IN (MicrosoftEdgeEnterprise*.msi) DO echo %%a && msiexec.exe /i %%a /q /norestart && del %%a )
 
 :install-ashampoo-burning-studio
-(for %%a IN (ashampoo_burning_studio_*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART && del %%a )
-IF EXIST "%PUBLIC%\Desktop\Ashampoo Deals.url" del "%PUBLIC%\Desktop\Ashampoo Deals.url"
+for %%a IN (ashampoo_burning_studio_*.exe) DO (
+    echo %%a
+ 
+    for /f "tokens=8* delims=^\" %%i in ('reg query "%X86-UNINSTALL-REG%" /s /f "Ashampoo Burning Studio" ^| findstr "HKEY"') do (
+        for /f "tokens=2* delims= " %%d in ('reg query "%X86-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
+            echo Uninstall: %%e
+        )
+        for /f "tokens=2* delims= " %%d in ('reg query "%X86-UNINSTALL-REG%\%%i" /v "QuietUninstallString"') do (
+            %%e
+        )
+    )
+    for /f "tokens=7* delims=^\" %%i in ('reg query "%X64-UNINSTALL-REG%" /s /f "Ashampoo Burning Studio" ^| findstr "HKEY"') do (
+        for /f "tokens=2* delims= " %%d in ('reg query "%X64-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
+            echo Uninstall: %%e
+        )
+        for /f "tokens=2* delims= " %%d in ('reg query "%X64-UNINSTALL-REG%\%%i" /v "QuietUninstallString"') do (
+            %%e
+        )
+    )
+
+    %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART && del %%a || echo Ashampoo Burning Studio may require a product key, or the setup may report errors during execution. Run the setup manually and follow the instructions. && timeout 10
+    IF EXIST "%PUBLIC%\Desktop\Ashampoo Deals.url" del "%PUBLIC%\Desktop\Ashampoo Deals.url"
+)
 
 :install-cdburnerxp
 (for %%a IN (cdbxp_setup*.exe) DO echo %%a && %%a /VERYSILENT /NORESTART && del %%a )
