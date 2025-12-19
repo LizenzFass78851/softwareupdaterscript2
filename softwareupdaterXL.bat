@@ -7,6 +7,12 @@ TITLE SW-Updater-Script
 SET X86-UNINSTALL-REG="HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall"
 SET X64-UNINSTALL-REG="HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"
 
+:install-net-framework-3.5-for-windows-11
+(for %%a IN ("DotNet35Setup*.exe") DO echo %%a && "%%a" /install /quiet /norestart && del %%a )
+
+:install-net-windowsdesktop-runtime
+(for %%a IN ("windowsdesktop-runtime*.exe") DO echo %%a && "%%a" /install /quiet /norestart && del %%a )
+
 :install-java-8
 for %%a IN (jre-8u*-windows-i586.exe) DO (
     echo %%a
