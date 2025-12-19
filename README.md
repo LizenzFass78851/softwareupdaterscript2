@@ -36,6 +36,8 @@ There is now the optional additional script softwareupdaterXL.bat.
 - Libreoffice
 - Msedge New
 - Musicbrainz Picard
+- Net Framework 3.5 For Windows 11
+- Net Windowsdesktop Runtime
 - Notepadpp
 - Office Msi Updates
 - Onlyoffice
