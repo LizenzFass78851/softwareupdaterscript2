@@ -54,8 +54,8 @@ REM (for %%a IN (AnyDesk.exe) DO echo %%a && %%a --install "%ANYDESKPROG%\AnyDes
 :install-thunderbird
 (for %%a IN ("thunderbird*.exe") DO echo %%a && "%%a" /s && del "%%a" )
 
-:install-keepass
-(for %%a IN (KeePass*-Setup.exe) DO echo %%a && %%a /VERYSILENT /NORESTART /ALLUSERS && del %%a )
+:install-keepass-2
+(for %%a IN (KeePass-2*-Setup.exe) DO echo %%a && %%a /VERYSILENT /NORESTART /ALLUSERS && del %%a )
 
 :install-winscp
 (for %%a IN (WinSCP*-Setup.exe) DO echo %%a && %%a /VERYSILENT /NORESTART /ALLUSERS && del %%a )
@@ -162,6 +162,9 @@ REM (for %%a IN (reflect_setup*.exe) DO echo %%a && %%a /q /norestart && del %%a
 
 :install-hwinfo
 (for %%a IN (hwi*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART && del %%a )
+
+:install-greenshot
+(for %%a IN (Greenshot-INSTALLER-*-RELEASE.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /ALLUSERS && del %%a )
 
 :install-google-earth
 (for %%a IN (googleearthprowin-*.exe) DO echo %%a && %%a OMAHA=1 && del %%a )
