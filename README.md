@@ -28,10 +28,12 @@ There is now the optional additional script softwareupdaterXL.bat.
 - Firefox
 - Free Download Manager
 - Furmark
+- Gimp
 - Google Earth
 - Greenshot
 - Hasleo Backup Suite
 - Hwinfo
+- Inkscape
 - Java 8
 - Keepass 2
 - Libreoffice
