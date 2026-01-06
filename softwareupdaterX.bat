@@ -26,6 +26,9 @@ REM (for %%a IN (pdf24-creator*.exe) DO echo %%a && %%a /VERYSILENT /NORESTART &
 :install-greenshot
 (for %%a IN (Greenshot-INSTALLER-*-RELEASE.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /ALLUSERS && del %%a )
 
+:install-inkscape
+(for %%a IN (inkscape-*.exe) DO echo %%a && %%a /S && del %%a )
+
 :install-office-msi-updates
 (for %%a IN (*x-none.msp) DO echo %%a && msiexec.exe /p %%a /q /norestart && del %%a )
 
