@@ -166,6 +166,12 @@ REM (for %%a IN (reflect_setup*.exe) DO echo %%a && %%a /q /norestart && del %%a
 :install-greenshot
 (for %%a IN (Greenshot-INSTALLER-*-RELEASE.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /ALLUSERS && del %%a )
 
+:install-gimp
+(for %%a IN (gimp-*-setup*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /ALLUSERS && del %%a )
+
+:install-inkscape
+(for %%a IN (inkscape-*.exe) DO echo %%a && %%a /S && del %%a )
+
 :install-google-earth
 (for %%a IN (googleearthprowin-*.exe) DO echo %%a && %%a OMAHA=1 && del %%a )
 
