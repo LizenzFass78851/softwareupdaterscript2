@@ -216,8 +216,8 @@ IF EXIST "%USERPROFILE%\Desktop\SUMo Home Page.URL" del "%USERPROFILE%\Desktop\S
 :install-sumo
 (for %%a IN (sumo*.exe) DO echo %%a && %%a /VERYSILENT /NORESTART && del %%a )
 
-:install-wingetui
-(for %%a IN (WingetUI.Installer*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /ALLUSERS && del %%a )
+:install-unigetui
+(for %%a IN (UniGetUI.Installer*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /ALLUSERS && del %%a )
 
 :install-ucheck
 (for %%a IN (UCheck_setup*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART && del %%a )
