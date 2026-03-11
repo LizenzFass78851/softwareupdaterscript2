@@ -54,9 +54,9 @@ There is now the optional additional script softwareupdaterXL.bat.
 - Teamviewer
 - Thunderbird
 - Ucheck
+- Unigetui
 - Virtualbox
 - Virtualdj
 - Vlc
-- Wingetui
 - Winscp
 - Xmediarecode
