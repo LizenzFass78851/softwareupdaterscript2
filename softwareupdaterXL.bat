@@ -126,6 +126,9 @@ for %%a IN (VirtualBox*.exe) DO (
 REM not silent step and file after not deleted
 (for %%a IN (Oracle*_VirtualBox_Extension_Pack*.vbox-extpack) DO echo %%a && explorer %%a )
 
+:install-handbrake
+(for %%a IN (HandBrake-*-*.exe) DO echo %%a && %%a /S && del %%a )
+
 :install-pdf24-creator
 (for %%a IN (pdf24-creator*.exe) DO echo %%a && %%a /VERYSILENT /NORESTART && del %%a )
 
@@ -166,11 +169,18 @@ REM (for %%a IN (reflect_setup*.exe) DO echo %%a && %%a /q /norestart && del %%a
 :install-greenshot
 (for %%a IN (Greenshot-INSTALLER-*-RELEASE.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /ALLUSERS && del %%a )
 
+:install-audacity
+REM "Without MorseHub"
+(for %%a IN (audacity-win-*-*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /ALLUSERS && del %%a )
+
 :install-gimp
 (for %%a IN (gimp-*-setup*.exe) DO echo %%a && %%a /SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /ALLUSERS && del %%a )
 
 :install-inkscape
 (for %%a IN (inkscape-*.exe) DO echo %%a && %%a /S && del %%a )
+
+:install-paint-net
+(for %%a IN (paint.net.*.install.*.exe) DO echo %%a && %%a /auto && del %%a )
 
 :install-google-earth
 (for %%a IN (googleearthprowin-*.exe) DO echo %%a && %%a OMAHA=1 && del %%a )
