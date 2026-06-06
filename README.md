@@ -18,6 +18,7 @@ There is now the optional additional script softwareupdaterXL.bat.
 - 7zip
 - Anydesk
 - Ashampoo Burning Studio
+- Audacity
 - Bleachbit
 - Blender
 - Ccleaner
@@ -31,6 +32,7 @@ There is now the optional additional script softwareupdaterXL.bat.
 - Gimp
 - Google Earth
 - Greenshot
+- Handbrake
 - Hasleo Backup Suite
 - Hwinfo
 - Inkscape
@@ -44,6 +46,7 @@ There is now the optional additional script softwareupdaterXL.bat.
 - Notepadpp
 - Office Msi Updates
 - Onlyoffice
+- Paint Net
 - Pdf24 Creator
 - Putty
 - Readerdc Exe Setup
