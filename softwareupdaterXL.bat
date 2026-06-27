@@ -40,7 +40,31 @@ for %%a IN (jre-8u*-windows-x64.exe) DO (
 )
 
 :install-7zip
-(for %%a IN (7z*.exe) DO echo %%a && %%a /S && del %%a )
+for %%a IN (7z*.exe) DO (
+    echo %%a
+
+    for /f "tokens=8* delims=^\" %%i in ('reg query "%X86-UNINSTALL-REG%" /s /f "7-Zip" ^| findstr "HKEY"') do (
+        for /f "tokens=2* delims= " %%d in ('reg query "%X86-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
+            echo Uninstall: %%e
+        )
+        for /f "tokens=2* delims= " %%d in ('reg query "%X86-UNINSTALL-REG%\%%i" /v "QuietUninstallString"') do (
+            taskkill /IM explorer.exe /F
+            %%e
+        )
+    )
+    for /f "tokens=7* delims=^\" %%i in ('reg query "%X64-UNINSTALL-REG%" /s /f "7-Zip" ^| findstr "HKEY"') do (
+        for /f "tokens=2* delims= " %%d in ('reg query "%X64-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
+            echo Uninstall: %%e
+        )
+        for /f "tokens=2* delims= " %%d in ('reg query "%X64-UNINSTALL-REG%\%%i" /v "QuietUninstallString"') do (
+            taskkill /IM explorer.exe /F
+            %%e
+        )
+    )
+
+    %%a /S && del %%a
+    tasklist | findstr /i "explorer.exe" >nul || start explorer.exe
+)
 
 :install-anydesk
 REM ###not possible because anydesk is not made for this kind of silent install
