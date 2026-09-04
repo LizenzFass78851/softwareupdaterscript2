@@ -43,26 +43,13 @@ for %%a IN (jre-8u*-windows-x64.exe) DO (
 for %%a IN (7z*.exe) DO (
     echo %%a
 
-    for /f "tokens=8* delims=^\" %%i in ('reg query "%X86-UNINSTALL-REG%" /s /f "7-Zip" ^| findstr "HKEY"') do (
-        for /f "tokens=2* delims= " %%d in ('reg query "%X86-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
-            echo Uninstall: %%e
-        )
-        for /f "tokens=2* delims= " %%d in ('reg query "%X86-UNINSTALL-REG%\%%i" /v "QuietUninstallString"') do (
-            taskkill /IM explorer.exe /F
-            %%e
-        )
-    )
-    for /f "tokens=7* delims=^\" %%i in ('reg query "%X64-UNINSTALL-REG%" /s /f "7-Zip" ^| findstr "HKEY"') do (
-        for /f "tokens=2* delims= " %%d in ('reg query "%X64-UNINSTALL-REG%\%%i" /v "DisplayName"') do (
-            echo Uninstall: %%e
-        )
-        for /f "tokens=2* delims= " %%d in ('reg query "%X64-UNINSTALL-REG%\%%i" /v "QuietUninstallString"') do (
-            taskkill /IM explorer.exe /F
-            %%e
-        )
-    )
+    taskkill /IM explorer.exe /F && timeout 1 /NOBREAK >nul
+
+    del /S /Q "%ProgramFiles%\7-Zip\7-zip*.dll*"      || rem
+    del /S /Q "%ProgramFiles(x86)%\7-Zip\7-zip*.dll*" || rem
 
     %%a /S && del %%a
+    timeout 1 /NOBREAK >nul
     tasklist | findstr /i "explorer.exe" >nul || start explorer.exe
 )
 
